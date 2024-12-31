@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    tools {
+        go 'Go 1.22' // Name of the Go installation
+    }
+    stages {
+        stage('Setup') {
+            steps {
+                sh 'go version' // Verifies Go is installed
+            }
+        }
+    }
+}
